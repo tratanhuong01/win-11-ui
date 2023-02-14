@@ -1,0 +1,67 @@
+@import "../../sass/mixins.scss";
+
+input {
+    padding: 0.8rem;
+    border: 0.1rem solid #DCDCDC;
+    border-radius: 0.4rem;
+}
+
+input:focus {
+    border-color: skyblue;
+    outline: none;
+}
+
+.input {
+    @include itemsCenter();
+    gap: 0.5rem;
+
+    &__container {
+        position: relative;
+    }
+
+    & button {
+        padding: 1rem;
+        height: 100%;
+        background-color: var(--color-main);
+        color: #ffffff;
+
+        &>i {
+            opacity: 0.9 !important;
+        }
+    }
+
+    & i {
+        font-size: 1.5rem;
+        opacity: 0.5 !important;
+    }
+
+    &__innerLeft {
+        & i {
+            @include absoluteLeft(1rem);
+        }
+
+        & input {
+            padding-left: 3.6rem !important;
+        }
+    }
+
+    &__innerRight {
+        & i {
+            @include absoluteRight(1rem);
+        }
+
+        & input {
+            padding-right: 3.6rem !important;
+        }
+    }
+
+    &__error {
+        color: red;
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        &.active {
+            margin: 0.5rem;
+        }
+    }
+}

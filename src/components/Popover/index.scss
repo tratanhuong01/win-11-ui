@@ -1,0 +1,115 @@
+@import "../../sass/mixins.scss";
+
+.popover {
+    position: absolute;
+    margin-top: 0.2rem;
+    background-color: rgba(236, 242, 252, 0.9);
+    border-radius: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &__profile {
+        padding: 0rem 1.6rem;
+
+        &--top {
+            @include itemsCenter();
+            gap: 1.6rem;
+
+            &>img {
+                width: 6rem;
+                height: 6rem;
+                border-radius: 0.5rem;
+            }
+
+            &>div {
+                flex: 1;
+
+                &>p {
+                    &:nth-child(1) {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        cursor: pointer;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: var(--color-main);
+                        }
+
+                        margin-bottom: 0.3rem;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 1.2rem;
+                        color: var(--color-text);
+                    }
+                }
+            }
+        }
+
+        &--catelog {
+
+            &>li,
+            &>div {
+                padding-top: 0;
+
+                &:nth-child(1) {
+                    padding-top: 1.6rem;
+                }
+
+                padding-bottom: 1.6rem;
+                color: var(--color-text);
+                cursor: pointer;
+                @include itemsCenter();
+                gap: 1rem;
+                font-weight: 600;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: var(--color-main);
+                }
+            }
+        }
+    }
+
+    &__notify {
+        &--top {
+            padding: 0rem 1.6rem;
+            @include itemsCenter();
+            justify-content: space-between;
+            margin-bottom: 1.6rem;
+
+            &>div {
+                @include itemsCenter();
+                gap: 1rem;
+
+                &>p {
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                }
+
+                &>span {
+                    font-size: 1.25rem;
+                    padding: 0.2rem 0.5rem;
+                    background-color: rgb(254 226 226);
+                    color: rgb(185 28 28);
+                }
+            }
+
+            &>span {
+                cursor: pointer;
+                font-weight: 500;
+                color: var(--color-main);
+                font-size: 1.2rem;
+            }
+        }
+
+        &--footer {
+            @include justifyCenter();
+
+            &>button {
+                width: auto;
+                margin: 0 !important;
+                margin-top: 1.2rem !important;
+            }
+        }
+    }
+}
