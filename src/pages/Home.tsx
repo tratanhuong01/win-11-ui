@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import screen from "../assets/images/screen.png"
 import TaskBar from "../components/TaskBar";
+import { TaskbarProvider } from "../contexts/TaskbarContext/TaskbarContext";
 //
 const Home = () => {
   //
@@ -18,7 +19,9 @@ const Home = () => {
       </div>
       <div className="box">
         <div className="w-full h-full relative box__">
-          <TaskBar isShow={true} />
+          <TaskbarProvider>
+            <TaskBar isShow={true} />
+          </TaskbarProvider>
         </div>
       </div>
     </>

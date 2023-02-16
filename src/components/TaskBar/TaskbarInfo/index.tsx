@@ -1,5 +1,6 @@
 import icons from "../../../icons";
 import TaskbarInfoItem from "../TaskbarInfoItem";
+import TaskInfoCalendar from "./TaskInfoCalendar";
 
 //
 const TaskbarInfo = () => {
@@ -16,14 +17,15 @@ const TaskbarInfo = () => {
                     Show hidden icons
                 </div>}
                 <i className='bx bx-chevron-left'></i>
-            </>
-            } typeClick="click">
+            </>}
+                typeClick="click"
+            >
                 <div className="list">
-                    {Object.keys(icons).map((icon, key) =>
+                    {icons.map((icon, key) =>
                         <div key={key}>
-                            <img src={(icons as any)[icon]} key={key} alt='' />
+                            <img src={icon.image} key={key} alt='' />
                             <div className="hover-text" style={{ whiteSpace: 'nowrap' }}>
-                                {`${icon.substring(0, 1).toUpperCase()}${icon.substring(1, icon.length)}`}
+                                {`${icon.name}`}
                             </div>
                         </div>
                     )}
@@ -56,12 +58,7 @@ const TaskbarInfo = () => {
                     <i className='bx bx-volume-full' ></i>
                 </div>
             </li>
-            <li>
-                <div>
-                    <span>7:22 PM</span>
-                    <span>11/6/2022</span>
-                </div>
-            </li>
+            <TaskInfoCalendar />
             <li onClick={() => {
                 if (!document.fullscreenElement) {
                     document.documentElement.requestFullscreen();

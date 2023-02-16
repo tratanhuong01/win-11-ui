@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import TaskbarItemObject from "../../interfaces/@types.taskbar-item";
 
 type PopoverProps = {
     children?: ReactNode,
@@ -9,7 +10,8 @@ type PopoverProps = {
     button?: ReactNode,
     handleButton?: Function,
     typeClick: 'mousedown' | 'click',
-    PopoverContent?: any
+    PopoverContent?: any,
+    icon: TaskbarItemObject
 };
 
 export default PopoverProps;
