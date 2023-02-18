@@ -25,7 +25,7 @@ const TaskbarInfoItem = ({
     const taskbarContext = useContext(TaskbarContext);
     //
     return (
-        <li className={`${icon && taskbarContext?.taskbar.openCurrent === icon.id ? 'active' : ''}`}>
+        <li className={`${icon && icon.name === "Search" ? 'search' : ''} ${icon && taskbarContext?.taskbar.openCurrent === icon.id ? 'active' : ''}`}>
             <Popover
                 icon={icon}
                 style={style}

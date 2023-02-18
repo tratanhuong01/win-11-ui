@@ -1,0 +1,11 @@
+.window-search {
+    width: 45%;
+    position: fixed;
+    height: calc(100vh - 13rem);
+    top: 50%;
+    background-color: #e5e5e5;
+    left: 50%;
+    border-radius: 0.8rem;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

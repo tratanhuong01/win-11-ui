@@ -44,6 +44,7 @@ const TaskbarItemCenter = ({ icon }: TaskbarItemCenterProps) => {
 
         return temp;
     })();
+    const UI = TaskbarProperties;
     //  
     return (
         <TaskbarInfoItem
@@ -57,7 +58,7 @@ const TaskbarItemCenter = ({ icon }: TaskbarItemCenterProps) => {
             icon={icon}
             ButtonHandle={TaskbarIcon}
             typeClick="mousedown"
-            PopoverContent={TaskbarProperties}>
+            PopoverContent={UI}>
         </TaskbarInfoItem>
     )
 }

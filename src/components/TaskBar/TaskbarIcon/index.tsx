@@ -13,10 +13,18 @@ const TaskbarIcon = ({ icon, isShow }: TaskbarIconProps) => {
     const taskbarContext = useContext(TaskbarContext);
     //
     return <>
-        <img src={icon.image as string} alt="" />
-        {icon.isOpen && <div className={`line ${taskbarContext?.taskbar.openCurrent === icon.id ? 'active' : ''}`}>
-        </div>}
-        {isShow && <TaskbarPreview icon={icon} />}
+        {icon.name === "Search" ?
+            <div className="search">
+                <i className="bx bx-search" />
+                <span>Search</span>
+            </div>
+            :
+            <>
+                <img src={icon.image as string} alt="" />
+                {icon.isOpen && <div className={`line ${taskbarContext?.taskbar.openCurrent === icon.id ? 'active' : ''}`}>
+                </div>}
+                {isShow && icon.isPreview && <TaskbarPreview icon={icon} />}
+            </>}
     </>
 }
 

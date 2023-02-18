@@ -11,6 +11,7 @@ import chrome from "./assets/icons/chrome-icon.png";
 import vscode from "./assets/icons/visual-studio-code-icon.png";
 import folder from "./assets/icons/folder-icon.png";
 import { v4 } from 'uuid';
+import WindowSearch from "./components/WindowSearch";
 
 const icons = [
     {
@@ -18,72 +19,96 @@ const icons = [
         image: windows,
         name: "Windows",
         isOpen: false,
+        UI: WindowSearch,
+        isPreview: false
     },
     {
         id: v4(),
         image: search,
         name: "Search",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: false
     },
     {
         id: v4(),
         image: facebook,
         name: "Facebook",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: calculator,
         name: "Calcalator",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: calendar,
         name: "Calendar",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: edge,
         name: "Edge",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: mail,
         name: "Mail",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: setting,
         name: "Setting",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: photo,
         name: "Photo",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: chrome,
         name: "Chrome",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: vscode,
         name: "VSCode",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
     {
         id: v4(),
         image: folder,
         name: "Folder",
         isOpen: false,
+        UI: () => <></>,
+        isPreview: true
     },
 ]
 
